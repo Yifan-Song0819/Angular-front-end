@@ -1,27 +1,53 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="contain">
+<div>
     <div style="text-align:center" class="jumbotron">
       <h1>
         Welcome to {{ title }}!
       </h1>
-
     </div>
 
-    <div class="col-md-4 col-md-offset-4">
+
+    <div class="col-md-4 col-md-offset-4" >
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h2>Please login or sign up</h2>
             </div>
 
             <div class="panel-body">
-                <form>
-                    <input type="text" placeholder="UserName"><br>
-                    <input type="text" placeholder="PassWord">
-                </form>
-            </div>
+
+                <article class="card-body mx-auto" style="max-width: 400px;">
+                    <form>
+                    	<div class="form-group input-group">
+                    		<div class="input-group-prepend">
+                    		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                    		 </div>
+                            <input class="form-control" placeholder="UserName" type="text">
+                        </div>
+
+                        <div class="form-group input-group">
+                        	<div class="input-group-prepend">
+                    		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                    		 </div>
+                            <input class="form-control" placeholder="PassWord" type="email">
+                        </div>
+                    </form>
+
+                    <div>
+                        <button type="submit" class="btn btn-primary btn-block"> Log In  </button>
+                        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+                    </div>
+
+                </article>
+
+            </div>   <!-- the panel body -->
+
         </div>
-    </div>
-</div>
+    </div>              <!-- panel login or sign up -->
+
+</div>  <!-- the whole thing -->
+
+
+
 
 <div>
     <app-test1></app-test1>
