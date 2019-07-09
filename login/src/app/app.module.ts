@@ -7,6 +7,14 @@ import { AppComponent } from './app.component';
 import { CreateComponent } from './create/create.component';
 import { MenuComponent } from './menu/menu.component';
 
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes = [
+    // the HomePageComponent and Test1Component must be the same with import xxxx above
+    {path:'menu', component: MenuComponent},
+    {path:'create', component: CreateComponent},
+];
 
 @NgModule({
   declarations: [
@@ -16,7 +24,7 @@ import { MenuComponent } from './menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
