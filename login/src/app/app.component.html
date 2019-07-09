@@ -1,24 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div class="contain">
+    <div style="text-align:center" class="jumbotron">
+      <h1>
+        Welcome to {{ title }}!
+      </h1>
 
+    </div>
+
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h2>Please login or sign up</h2>
+            </div>
+
+            <div class="panel-body">
+                <form>
+                    <input type="text" placeholder="UserName"><br>
+                    <input type="text" placeholder="PassWord">
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<app-test1></app-test1>
-
+<div>
+    <app-test1></app-test1>
+</div>
 
 <router-outlet></router-outlet>
