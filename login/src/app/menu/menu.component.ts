@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
   ngOnInit() {
   }
 
-  gotoCreate(){
-      this.router.navigate(['/create']);
-  }
+  // gotoCreate(){
+  //     this.router.navigate(['/create']);
+  // }
 }
