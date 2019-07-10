@@ -13,7 +13,9 @@ export class MenuComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+
   }
+  // showit: boolean = false;
 
   // gotoCreate(){
   //     this.router.navigate(['/create']);

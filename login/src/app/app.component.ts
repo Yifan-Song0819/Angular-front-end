@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My Website';
+  showit: boolean = true;
+  show2: boolean = false;
+
+  onClick(){
+      this.showit = !this.showit;
+      this.show2 = !this.show2;
+  }
 }

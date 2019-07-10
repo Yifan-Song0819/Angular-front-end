@@ -5,23 +5,28 @@
           <p style="font-size:60px;">Welcome to {{ title }}!</p>
       </h1>
     </div>
-
 </div>  <!--  -->
+
+
+<div *ngIf="showit">1111111111</div>
+<div *ngIf="show2">2222222222</div>
+
+<button (click)="onClick()">123</button>
+
 
 <div>
     <app-menu></app-menu>
 </div>
 
-<div>
+<!-- <div>
     <app-create></app-create>
-</div>
+</div> -->
 
 
 <!-- <router-outlet></router-outlet> -->
 
 <br>
 <!-- <app-create></app-create> -->
-
 <article class="bg-secondary mb-3">
     <div class="card-body text-center">
         <h3 class="text-white mt-3">All Rights Reserved</h3>
