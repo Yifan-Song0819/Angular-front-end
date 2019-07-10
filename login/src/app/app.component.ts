@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'My Website';
   showit: boolean = true;
-  show2: boolean = false;
 
   showMenu: boolean = true;
   showCreate: boolean = false;
@@ -17,12 +16,14 @@ export class AppComponent {
 
   c(){
       this.showit = !this.showit;
-      this.show2 = !this.show2;
+      
       console.log(this.title);
+      console.log(this.showMenu);
+      console.log(this.showCreate);
   }
 
-  // Click(){
-  //     this.showMenu = !this.showMenu;
-  //     this.showCreate = !this.showCreate;
-  // }
+  receiveEvent($event){
+      this.showMenu = $event;
+  }
+
 }

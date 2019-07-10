@@ -1,22 +1,28 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<div>
+    <nav class="bg-primary text-white fixed-top">
+        <button type="button" class="btn btn-primary btn-lg">Home</button>
+        <button type="button" class="btn btn-primary btn-lg">Create Account</button>
+        <button type="button" class="btn btn-primary btn-lg">3</button>
+        <button type="button" class="btn btn-primary btn-lg">4</button>
+        <button type="button" class="btn btn-primary btn-lg float-right">Contact Us</button>
+        <button type="button" class="btn btn-primary btn-lg float-right">Instagram</button>
+        <button type="button" class="btn btn-primary btn-lg float-right">Facebook</button>
+    </nav>
+</div>
+
 <div>
     <div style="text-align:center" class="jumbotron">
       <h1>
           <p style="font-size:60px;">Welcome to {{ title }}!</p>
       </h1>
     </div>
-</div>  <!--  -->
+</div>
 
 
-<div *ngIf="showit">1111111111</div>
-<div *ngIf="show2">2222222222</div>
-
-<button (click)="c()">123</button>
-
-
+<br>
 
 <div *ngIf="showMenu">
-    <app-menu [title_in_app] = "title_in_app"></app-menu>
+    <app-menu [title_in_app] = "title_in_app" [showMenu] = "showMenu" [showCreate] = "showCreate"></app-menu>
     {{title_in_app}}
 </div>
 
@@ -26,6 +32,13 @@
 
 
 <!-- <router-outlet></router-outlet> -->
+
+
+<div *ngIf="showit">1111111111</div>
+<div *ngIf="!showit">2222222222</div>
+
+<button (click)="c()">123</button>
+
 
 <br>
 <!-- <app-create></app-create> -->
