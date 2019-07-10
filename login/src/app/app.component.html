@@ -11,16 +11,18 @@
 <div *ngIf="showit">1111111111</div>
 <div *ngIf="show2">2222222222</div>
 
-<button (click)="onClick()">123</button>
+<button (click)="c()">123</button>
 
 
-<div>
-    <app-menu></app-menu>
+
+<div *ngIf="showMenu">
+    <app-menu [title_in_app] = "title_in_app"></app-menu>
+    {{title_in_app}}
 </div>
 
-<!-- <div>
+<div *ngIf="showCreate">
     <app-create></app-create>
-</div> -->
+</div>
 
 
 <!-- <router-outlet></router-outlet> -->

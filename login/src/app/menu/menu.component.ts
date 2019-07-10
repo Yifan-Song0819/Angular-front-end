@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router'; // Navigation to other components
 
+// import {title_in_app} from './app';
 
 @Component({
   selector: 'app-menu',
@@ -8,16 +9,19 @@ import { Router } from '@angular/router'; // Navigation to other components
   styleUrls: ['./menu.component.css']
 })
 
-export class MenuComponent implements OnInit {
+export class MenuComponent {
 
-  constructor(private router: Router) { }
+  @Input() title_in_app: string;
 
-  ngOnInit() {
+  showMenu: boolean = true;
+  showCreate: boolean = false;
 
+  Click(){
+      this.showMenu = !this.showMenu;
+      this.showCreate = !this.showCreate;
   }
-  // showit: boolean = false;
 
-  // gotoCreate(){
-  //     this.router.navigate(['/create']);
-  // }
+  test(){
+      console.log(this.title_in_app);
+  }
 }
