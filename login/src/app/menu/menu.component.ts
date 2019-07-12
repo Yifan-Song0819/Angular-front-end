@@ -25,7 +25,7 @@ export class MenuComponent {
       // console.log(this.showMenu);
       // console.log(this.showCreate);
       this.new_menu.emit(this.showMenu);
-      this.new_create.emit(this.new_create);
+      // this.new_create.emit(this.new_create);
   }
 
   test(){

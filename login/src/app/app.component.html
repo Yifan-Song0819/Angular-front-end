@@ -1,7 +1,9 @@
 <div>
     <nav class="bg-primary text-white fixed-top">
-        <button type="button" class="btn btn-primary btn-lg">Home</button>
-        <button type="button" class="btn btn-primary btn-lg">Create Account</button>
+        <button type="button" class="btn btn-primary btn-lg" (click)="home()">Home</button>
+        <button type="button" class="btn btn-primary btn-lg" (click)="create()">Create Account</button>
+
+
         <button type="button" class="btn btn-primary btn-lg">3</button>
         <button type="button" class="btn btn-primary btn-lg">4</button>
         <button type="button" class="btn btn-primary btn-lg float-right">Contact Us</button>
@@ -21,12 +23,13 @@
 
 <br>
 
+
 <div *ngIf="showMenu">
     <app-menu [title_in_app] = "title_in_app" [showMenu] = "showMenu" [showCreate] = "showCreate"></app-menu>
     {{title_in_app}}
 </div>
 
-<div *ngIf="showCreate">
+<div *ngIf="!showMenu">
     <app-create></app-create>
 </div>
 
@@ -34,11 +37,11 @@
 <!-- <router-outlet></router-outlet> -->
 
 
+
 <div *ngIf="showit">1111111111</div>
 <div *ngIf="!showit">2222222222</div>
 
 <button (click)="c()">123</button>
-
 
 <br>
 <!-- <app-create></app-create> -->
