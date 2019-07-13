@@ -24,14 +24,19 @@ export class MenuComponent {
 
   ngOnInit(): void{
     this.userForm = this.fb.group({
-      userName: ["", [Validators.required, Validators.minLength(2)]], //initilize ob not using =
-      passWord: ["", [Validators.required, Validators.minLength(6)]], //comma
+      userName: ["", [Validators.required]], //initilize ob not using =
+      passwd: ["", [Validators.required, Validators.minLength(6)]], //comma
     });
   }
 
 
   login(){
-    // alert("Log in!");
+    if (this.userForm.value.userName != "" && this.userForm.value.passwd != ""){
+        alert("Login!");
+    }
+    console.log(this.userForm.value.userName);
+    console.log(this.userForm.value.passwd);
+    // console.log(this.userForm.value);
   }
 
   test(){

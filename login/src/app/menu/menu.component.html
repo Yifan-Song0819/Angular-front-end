@@ -13,8 +13,9 @@
             		 </div>
                     <input formControlName="userName" class="form-control" placeholder="UserName" type="text">
                     <div *ngIf="userForm.controls.userName.invalid && userForm.controls.userName.touched" class="a">
-                        <div *ngIf="userForm.controls.userName.errors?.required">Username cannot be empty</div>
-                        <div *ngIf="userForm.controls.userName.errors.minlength">Username length must be longer than 2</div>
+                        <div *ngIf="userForm.controls.userName.errors?.required">
+                            <pre class="wrong_message">  Username cannot be empty!</pre>
+                        </div>
                     </div>
                 </div> <!-- form-group// -->
 
@@ -22,7 +23,12 @@
                 	<div class="input-group-prepend">
             		    <span class="input-group-text"></span>
             		</div>
-                    <input class="form-control" placeholder="Password" type="password">
+                    <input formControlName="passwd" class="form-control" placeholder="Password" type="password">
+                    <div *ngIf="userForm.controls.passwd.invalid && userForm.controls.passwd.touched" class="a">
+                        <div *ngIf="userForm.controls.passwd.errors?.required">
+                            <pre class="wrong_message">  Password cannot be empty!</pre>
+                        </div>
+                    </div>
                 </div> <!-- form-group// -->
 
                 <div class="form-group">
