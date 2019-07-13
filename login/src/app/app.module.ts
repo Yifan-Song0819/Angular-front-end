@@ -7,8 +7,10 @@ import { AppComponent } from './app.component';
 import { CreateComponent } from './create/create.component';
 import { MenuComponent } from './menu/menu.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { JumboComponent } from './jumbo/jumbo.component';
+import { BottomComponent } from './bottom/bottom.component';
 
 const appRoutes: Routes = [
     // the HomePageComponent and Test1Component must be the same with import xxxx above
@@ -20,11 +22,15 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     CreateComponent,
-    MenuComponent
+    MenuComponent,
+    JumboComponent,
+    BottomComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

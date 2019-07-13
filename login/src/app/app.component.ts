@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'My Website';
+
   showit: boolean = true;
 
   showMenu: boolean = true;
@@ -16,8 +16,6 @@ export class AppComponent {
 
   c(){
       this.showit = !this.showit;
-
-      console.log(this.title);
       console.log(this.showMenu);
   }
 

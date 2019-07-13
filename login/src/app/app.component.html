@@ -1,28 +1,16 @@
 <div>
     <nav class="bg-primary text-white fixed-top">
-        <button type="button" class="btn btn-primary btn-lg" (click)="home()">Home</button>
-        <button type="button" class="btn btn-primary btn-lg" (click)="create()">Create Account</button>
-
-
-        <button type="button" class="btn btn-primary btn-lg">3</button>
-        <button type="button" class="btn btn-primary btn-lg">4</button>
-        <button type="button" class="btn btn-primary btn-lg float-right">Contact Us</button>
-        <button type="button" class="btn btn-primary btn-lg float-right">Instagram</button>
-        <button type="button" class="btn btn-primary btn-lg float-right">Facebook</button>
+        <button type="button" class="btn btn-primary btn-lg btn-rounded" (click)="home()">Home</button>
+        <button type="button" class="btn btn-primary btn-lg btn-rounded" (click)="create()">Create Account</button>
+        <button type="button" class="btn btn-primary btn-lg btn-rounded float-right">Contact Us</button>
+        <button type="button" class="btn btn-primary btn-lg btn-rounded float-right">Instagram</button>
+        <button type="button" class="btn btn-primary btn-lg btn-rounded float-right">Facebook</button>
     </nav>
 </div>
 
-<div>
-    <div style="text-align:center" class="jumbotron">
-      <h1>
-          <p style="font-size:60px;">Welcome to {{ title }}!</p>
-      </h1>
-    </div>
-</div>
-
-
 <br>
-
+<app-jumbo></app-jumbo>
+<br>
 
 <div *ngIf="showMenu">
     <app-menu [title_in_app] = "title_in_app" [showMenu] = "showMenu" [showCreate] = "showCreate"></app-menu>
@@ -33,22 +21,9 @@
     <app-create></app-create>
 </div>
 
-
 <!-- <router-outlet></router-outlet> -->
 
 
-
-<div *ngIf="showit">1111111111</div>
-<div *ngIf="!showit">2222222222</div>
-
-<button (click)="c()">123</button>
-
 <br>
-<!-- <app-create></app-create> -->
-<article class="bg-secondary mb-3">
-    <div class="card-body text-center">
-        <h3 class="text-white mt-3">All Rights Reserved</h3>
-    </div>
-</article>
-
+<app-bottom></app-bottom>
 <router-outlet></router-outlet>

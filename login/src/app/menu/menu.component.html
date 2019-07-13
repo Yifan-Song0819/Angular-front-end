@@ -2,16 +2,20 @@
     <div class="card bg-light">
         <br>
         <div class="text-center">
-            <h2 style="font-size:30px;">Please Login or Create Account</h2>
+            <h2 style="font-size:30px;">Please Login</h2>
         </div>
 
         <article class="card-body mx-auto" style="max-width: 400px;">
-        	<form>
+        	<form [formGroup] = "userForm">
             	<div class="form-group input-group">
             		<div class="input-group-prepend">
             		    <span class="input-group-text"></span>
             		 </div>
-                    <input name="" class="form-control" placeholder="UserName" type="text">
+                    <input formControlName="userName" class="form-control" placeholder="UserName" type="text">
+                    <div *ngIf="userForm.controls.userName.invalid && userForm.controls.userName.touched" class="a">
+                        <div *ngIf="userForm.controls.userName.errors?.required">Username cannot be empty</div>
+                        <div *ngIf="userForm.controls.userName.errors.minlength">Username length must be longer than 2</div>
+                    </div>
                 </div> <!-- form-group// -->
 
                 <div class="form-group input-group">
@@ -23,9 +27,7 @@
 
                 <div class="form-group">
                     <!-- <a routerLink="/create" routerLinkActive="active">Go create</a><br> -->
-                    <button type="button" class="btn btn-primary btn-block">Log In</button>
-                    <button type="button" class="btn btn-primary btn-block" (click)="Click()">Create Account</button>
-
+                    <button type="button" class="btn btn-primary btn-block" (click)="login()">Log In</button>
                     <button type="button" (click)="test()">test</button> say {{title_in_app}}
                 </div> <!-- form-group// -->
             </form>

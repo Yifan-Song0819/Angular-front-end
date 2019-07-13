@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Router } from '@angular/router'; // Navigation to other components
+import { Validators, FormGroup, FormControl, FormBuilder } from '@angular/forms';
 
 // import {title_in_app} from './app';
 
@@ -18,14 +19,19 @@ export class MenuComponent {
   @Output() new_menu = new EventEmitter<boolean>();
   @Output() new_create = new EventEmitter<boolean>();
 
-  Click(){
-      this.showMenu = !this.showMenu;
-      this.showCreate = !this.showCreate;
-      console.log("menu gogogo");
-      // console.log(this.showMenu);
-      // console.log(this.showCreate);
-      this.new_menu.emit(this.showMenu);
-      // this.new_create.emit(this.new_create);
+  userForm:FormGroup;
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void{
+    this.userForm = this.fb.group({
+      userName: ["", [Validators.required, Validators.minLength(2)]], //initilize ob not using =
+      passWord: ["", [Validators.required, Validators.minLength(6)]], //comma
+    });
+  }
+
+
+  login(){
+    // alert("Log in!");
   }
 
   test(){
