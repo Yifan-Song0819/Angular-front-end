@@ -16,7 +16,7 @@ export class CreateComponent implements OnInit {
     this.userForm = this.fb.group({
       userName: ["", [Validators.required]], //initilize ob not using =
       passwd: ["", [Validators.required, Validators.minLength(6)]], //comma
-      email: ["", [Validators.required, Validators.pattern('a')]],
+      email: ["", [Validators.required, Validators.pattern('[a-zA-z0-9]*@[a-zA-z0-9]*')]],
     });
   }
 

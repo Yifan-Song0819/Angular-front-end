@@ -8,11 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   showit: boolean = true;
-
   showMenu: boolean = true;
-
-
   title_in_app = "title from parent";
+
+  values="";
+  onKey(event: any) { // without type info
+    this.values = event.target.value;
+  }
 
   c(){
       this.showit = !this.showit;
@@ -22,11 +24,7 @@ export class AppComponent {
   home(){
       this.showMenu = true;
   }
-
   create(){
       this.showMenu = false;
   }
-
-
-
 }
