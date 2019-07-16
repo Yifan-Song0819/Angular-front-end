@@ -31,4 +31,14 @@ export class CreateComponent implements OnInit {
     this.string_passwd2 = event.target.value;
   }
 
+
+  //  so the logic of *ngIf:
+  // when returns true, it shows the wrong message;
+  // when returns false, its not showing;
+
+  compare() : boolean{
+      // console.log(this.string_passwd1 == this.string_passwd2);
+      return this.string_passwd1 != this.string_passwd2;
+  }
+
 }

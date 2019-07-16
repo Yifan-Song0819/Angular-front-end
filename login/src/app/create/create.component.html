@@ -46,6 +46,9 @@
                                 <pre class="wrong_message">  Password cannot be empty!</pre>
                             </div>
                         </div>
+                        <div *ngIf="compare()">
+                            <pre class="wrong_message">  Passwords must be same!</pre>
+                        </div>
                     </div>
 
                     <div class="form-group input-group">
