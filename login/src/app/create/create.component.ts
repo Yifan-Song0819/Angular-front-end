@@ -19,7 +19,7 @@ export class CreateComponent implements OnInit {
       userName: ["", [Validators.required]], //initilize ob not using =
       passwd: ["", [Validators.required, Validators.minLength(6)]], //comma
       rePasswd: ["", [Validators.required, Validators.minLength(6)]],
-      email: ["", [Validators.required, Validators.pattern('[a-zA-z0-9]*@[a-zA-z0-9]*')]],
+      email: ["", [Validators.required, Validators.pattern('[a-zA-z0-9\.]*@[a-zA-z0-9\.]*')]],
     });
   }
 
@@ -35,7 +35,6 @@ export class CreateComponent implements OnInit {
   //  so the logic of *ngIf:
   // when returns true, it shows the wrong message;
   // when returns false, its not showing;
-
   compare() : boolean{
       // console.log(this.string_passwd1 == this.string_passwd2);
       return this.string_passwd1 != this.string_passwd2;
