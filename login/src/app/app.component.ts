@@ -11,6 +11,7 @@ export class AppComponent {
   showMenu: boolean = true;
   title_in_app = "title from parent";
 
+  
   values="";
   onKey(event: any) { // without type info
     this.values = event.target.value;

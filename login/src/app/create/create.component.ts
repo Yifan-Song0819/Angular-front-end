@@ -8,6 +8,8 @@ import { Validators, FormGroup, FormControl, FormBuilder } from '@angular/forms'
 })
 export class CreateComponent implements OnInit {
 
+  string_passwd1 = "";
+  string_passwd2 = "";
   userForm:FormGroup;
   constructor(private fb: FormBuilder) {}
 
@@ -16,8 +18,17 @@ export class CreateComponent implements OnInit {
     this.userForm = this.fb.group({
       userName: ["", [Validators.required]], //initilize ob not using =
       passwd: ["", [Validators.required, Validators.minLength(6)]], //comma
+      rePasswd: ["", [Validators.required, Validators.minLength(6)]],
       email: ["", [Validators.required, Validators.pattern('[a-zA-z0-9]*@[a-zA-z0-9]*')]],
     });
+  }
+
+  passwd1(event: any){
+    this.string_passwd1 = event.target.value;
+  }
+
+  passwd2(event: any){
+    this.string_passwd2 = event.target.value;
   }
 
 }
