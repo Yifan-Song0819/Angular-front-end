@@ -65,7 +65,7 @@ export class CreateComponent implements OnInit {
 
     //check username, passwds same and not empty, email
     if (!user && !this.compare() && !em && this.check_passwds()){
-        alert("hahaha");
+        alert("Account created successful!");
     }
   }
 }
