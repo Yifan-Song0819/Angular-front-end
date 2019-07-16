@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { JumboComponent } from './jumbo/jumbo.component';
 import { BottomComponent } from './bottom/bottom.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
     // the HomePageComponent and Test1Component must be the same with import xxxx above
@@ -24,7 +25,8 @@ const appRoutes: Routes = [
     CreateComponent,
     MenuComponent,
     JumboComponent,
-    BottomComponent
+    BottomComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

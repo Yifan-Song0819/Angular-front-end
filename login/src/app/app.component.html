@@ -2,34 +2,37 @@
     <nav class="bg-primary text-white fixed-top">
         <button type="button" class="btn btn-primary btn-lg btn-rounded" (click)="home()">Home</button>
         <button type="button" class="btn btn-primary btn-lg btn-rounded" (click)="create()">Create Account</button>
-        <button type="button" class="btn btn-primary btn-lg btn-rounded float-right">Contact Us</button>
+        <button type="button" class="btn btn-primary btn-lg btn-rounded float-right" (click)="contact()">Contact Me</button>
         <button type="button" class="btn btn-primary btn-lg btn-rounded float-right">Instagram</button>
         <button type="button" class="btn btn-primary btn-lg btn-rounded float-right">Facebook</button>
     </nav>
 </div>
 
 <br>
-<app-jumbo></app-jumbo>
-<br>
+<div>
+    <app-jumbo></app-jumbo>
+</div>
 
-<div *ngIf="showMenu">
+<div *ngIf="showHome">
     <app-menu [title_in_app] = "title_in_app" [showMenu] = "showMenu" [showCreate] = "showCreate"></app-menu>
     {{title_in_app}}
 </div>
 
-<div *ngIf="!showMenu">
+<div *ngIf="showMenu">
     <app-create></app-create>
+</div>
+
+<div *ngIf="showContact">
+    <app-contact></app-contact>
 </div>
 
 <!-- <router-outlet></router-outlet> -->
 
-<div>
-    <input (keyup)="onKey($event)">
-    <p>{{values}}</p>
-</div>
-
 
 
 <br>
-<app-bottom></app-bottom>
+<div>
+    <app-bottom></app-bottom>
+</div>
+
 <router-outlet></router-outlet>

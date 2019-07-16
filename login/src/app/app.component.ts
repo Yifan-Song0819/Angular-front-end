@@ -7,25 +7,32 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  showit: boolean = true;
-  showMenu: boolean = true;
+  showHome: boolean = true;
+  showMenu: boolean = false;
+  showContact: boolean = false;
   title_in_app = "title from parent";
 
-  
-  values="";
-  onKey(event: any) { // without type info
-    this.values = event.target.value;
-  }
+
+
 
   c(){
-      this.showit = !this.showit;
       console.log(this.showMenu);
   }
 
   home(){
-      this.showMenu = true;
+      this.showHome = true;
+      this.showMenu = false;
+      this.showContact = false;
   }
   create(){
+      this.showHome = false;
+      this.showMenu = true;
+      this.showContact = false;
+  }
+
+  contact(){
+      this.showHome = false;
       this.showMenu = false;
+      this.showContact = true;
   }
 }
