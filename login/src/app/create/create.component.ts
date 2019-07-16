@@ -46,8 +46,6 @@ export class CreateComponent implements OnInit {
       return this.string_passwd1 != this.string_passwd2;
   }
 
-
-
   check_passwds() : boolean{
     return this.string_passwd1 != "" && this.string_passwd2 != "";
   }
@@ -61,11 +59,10 @@ export class CreateComponent implements OnInit {
     // let ps1: boolean = this.userForm.controls.passwd.invalid;
     // let ps2: boolean = this.userForm.controls.rePasswd.invalid;
     let em: boolean = this.userForm.controls.email.invalid;
-
-
     //check username, passwds same and not empty, email
     if (!user && !this.compare() && !em && this.check_passwds()){
-        alert("Account created successful!");
+        // alert("Account created successful!");
+        alert("This user: " + this.userForm.value.userName + " and his email: " + this.userForm.value.email);
     }
   }
 }
